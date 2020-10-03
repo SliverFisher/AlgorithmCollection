@@ -6,15 +6,15 @@ import java.util.List;
 
 public class ThreeSum {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5,-1,-3};
+        int[] array = {1, 2, 3, 4, 5, -1, -3};
         System.out.println(new ThreeSum().threeSum(array));
     }
 
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ls = new ArrayList<>();
         Arrays.sort(nums);
-        int first = -1;
-        int second = -1;
+        int first;
+        int second;
         for (int i = 0; i < nums.length - 2; i++) {
             if (i > 0) {
                 if (nums[i - 1] == nums[i])
