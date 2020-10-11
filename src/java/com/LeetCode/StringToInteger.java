@@ -2,10 +2,10 @@ package com.LeetCode;
 
 public class StringToInteger {
     public static void main(String[] args) {
-        System.out.println(new StringToInteger().myAtoi("-190"));
+        System.out.println(new StringToInteger().myAtob("-190"));
     }
 
-    public int myAtoi(String s) {
+    public int myAtob(String s) {
         s = s.trim();
         char[] c = s.toCharArray();
         if (s == null || s.equals(""))
