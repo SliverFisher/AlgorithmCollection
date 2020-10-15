@@ -50,7 +50,6 @@ public class StringToInteger {
         } catch (Exception e) {
             if (temp.equals("-") || temp.equals("+"))
                 return 0;
-
             if (isUp)
                 return Integer.MAX_VALUE;
             else return Integer.MIN_VALUE;
