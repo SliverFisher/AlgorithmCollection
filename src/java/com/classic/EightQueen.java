@@ -22,7 +22,7 @@ public class EightQueen {
         System.out.println("八皇后解法检查算法执行次数"+checkSum);
     }
 
-    /*
+    /**
     八皇后问题：
     1.递归思路：
     一。每一次插入一个皇后，所排出的行和列的规则一致
