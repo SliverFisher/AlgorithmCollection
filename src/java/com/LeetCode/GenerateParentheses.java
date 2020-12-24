@@ -38,7 +38,7 @@ public class GenerateParentheses {
         for (int i = 1; i <= n; i++) {
             int[] array = new int[n];
             array[n - 1] = i;
-            insertR(array, n - 2, n - i, n, Math.max((2 - i), 0), result);
+            insertR(array, n - 2, n - i, Math.max((2 - i), 0), result);
         }
         result.forEach(x -> {
             char[] temp = new char[n * 2];
@@ -54,17 +54,11 @@ public class GenerateParentheses {
                     temp[index] = left;
             }
             list.add(new String(temp));
-
         });
         return list;
     }
 
-    /***
-     * 插入左
-     *
-     */
-
-    private void insertR(int[] array, int insertIndex, int insertNumber, int n, int leastInsert, ArrayList<int[]> list) {
+    private void insertR(int[] array, int insertIndex, int insertNumber, int leastInsert, ArrayList<int[]> list) {
         if (insertNumber == 0) {
             list.add(array);
             return;
@@ -78,10 +72,9 @@ public class GenerateParentheses {
             array[insertIndex] = i;
             int[] temp = Arrays.copyOf(array, array.length);
             insertIndex--;
-            insertR(array, insertIndex, insertNumber - i, n, Math.max((insertNumber - i - insertIndex), 0), list);
+            insertR(array, insertIndex, insertNumber - i, Math.max((insertNumber - i - insertIndex), 0), list);
             insertIndex++;
             array = temp;
-
         }
     }
 
