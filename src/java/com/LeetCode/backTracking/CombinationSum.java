@@ -47,22 +47,22 @@ public class CombinationSum {
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
-        for (int i = candidates.length - 1; i >= 0; i--) {
-            trace(target, i, candidates, result, new ArrayList<>());
-        }
+        trace(target, candidates.length - 1, candidates, result, new ArrayList<>());
         return result;
     }
 
     private void trace(int target, int index, int[] ints, List<List<Integer>> result, ArrayList<Integer> temp) {
         if (index < 0)
             return;
-        temp.add(ints[index]);
-        int sum = checkOutOfBounds(temp);
-        if (sum == target) {
+        if (0 == target) {
             result.add(new ArrayList<>(temp));
-        } else if (sum < target) {
+        } else if (0 < target) {
             for (int i = index; i >= 0; i--) {
-                trace(target, i, ints, result, new ArrayList<>(temp));
+                if (ints[i] > target)
+                    continue;
+                temp.add(ints[i]);
+                trace(target - ints[i], i, ints, result, temp);
+                temp.remove(temp.size() - 1);
             }
         }
     }
