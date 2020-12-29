@@ -51,7 +51,6 @@ public class CombinationSumII {
     private void trace(int target, int index, int[] ints, List<List<Integer>> result, ArrayList<Integer> temp) {
         if (0 == target) {
             ArrayList<Integer> list = new ArrayList<>(temp);
-            //   if (!result.contains(list))
             result.add(list);
         } else if (0 < target) {
             for (int i = index; i >= 0; i--) {
