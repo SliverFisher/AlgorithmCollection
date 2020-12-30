@@ -21,5 +21,12 @@ public class AboutNumbers {
          * */
         System.out.println(i4 == 1900);
         System.out.println(Integer.valueOf(1900) == 1900);
+        Integer integer = Integer.valueOf(2);
+        changeBoxNumber(integer);
+        System.out.println(integer);
+    }
+
+    public static void changeBoxNumber(Integer integer) {
+        integer = 3;
     }
 }
