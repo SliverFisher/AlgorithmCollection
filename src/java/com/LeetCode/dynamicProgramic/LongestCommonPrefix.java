@@ -1,11 +1,14 @@
-package com.LeetCode;
+package com.LeetCode.dynamicProgramic;
+
+import java.math.BigDecimal;
 
 public class LongestCommonPrefix {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println(new LongestCommonPrefix().longestCommonPrefix(new String[]{"sss", "s222", "s"}));
+        System.out.println(new BigDecimal(2).add(null));
     }
 
-    public String longestCommonPrefix(String[] str) {
+    public String longestCommonPrefix(String[] str) throws Exception {
         StringBuilder result = new StringBuilder();
         if (str.length != 0) {
             int i = 0;

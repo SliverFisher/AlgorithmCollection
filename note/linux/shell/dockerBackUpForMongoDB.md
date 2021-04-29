@@ -1,4 +1,4 @@
-#!/bin/bash
+``#!/bin/bash
 #backup MongoDB
 
 #mongodump命令路径
