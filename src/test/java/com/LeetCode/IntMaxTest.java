@@ -16,4 +16,6 @@ public class IntMaxTest {
         System.out.println("最大："+(Integer.MAX_VALUE));
         System.out.println("最小："+(Integer.toBinaryString(Integer.MIN_VALUE)));
     }
+
+
 }
