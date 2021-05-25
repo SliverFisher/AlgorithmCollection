@@ -1,6 +1,4 @@
-package com.LeetCode.dynamic;
-
-import java.lang.reflect.Array;
+package com.LeetCode.dynamicProgramic;
 
 /**
  * @Author:Wendy

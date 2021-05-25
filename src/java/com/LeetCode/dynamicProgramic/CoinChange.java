@@ -1,4 +1,4 @@
-package com.LeetCode.dynamic;
+package com.LeetCode.dynamicProgramic;
 
 /**
  * @Author:Wendy
