@@ -16,8 +16,8 @@ public class Quick implements AbstractSort {
     }
 
     private void quickSort(int[] array, int start, int end) {
-        int k = (end - start) / 2;
-        System.out.println(k);
+        int k = (end-start)/2+start;
+
         int selectValue = array[k];
         int first = start;
         int last = end;
@@ -31,9 +31,16 @@ public class Quick implements AbstractSort {
             if (array[first] == array[last] && last > first) {
                 first++;
             } else {
+                System.out.println("------------");
+                System.out.println("first="+first);
+                System.out.println("last="+last);
+                System.out.println(Arrays.toString(array));
                 int temp = array[first];
                 array[first] = array[last];
                 array[last] = temp;
+                System.out.println(Arrays.toString(array));
+                System.out.println("");
+                System.out.println("------------");
             }
         }
         if (first - 1 > start) quickSort(array, start, first - 1);
