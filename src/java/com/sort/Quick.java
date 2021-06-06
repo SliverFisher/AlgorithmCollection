@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Quick implements AbstractSort {
     public static void main(String[] args) {
-        quickSort(array, 0, array.length - 1);
-        System.out.println(Arrays.toString(array));
+        quickSort(PHONE_NUMBER, 0, PHONE_NUMBER.length - 1);
+        System.out.println(Arrays.toString(PHONE_NUMBER));
     }
 
     @Override

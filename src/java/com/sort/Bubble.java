@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Bubble implements AbstractSort {
     public static void main(String[] args) {
-        System.out.println(new Bubble().sort(array));
+        System.out.println(new Bubble().sort(PHONE_NUMBER));
     }
 
     @Override

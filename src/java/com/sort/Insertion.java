@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Insertion implements AbstractSort {
     public static void main(String[] args) {
-        System.out.println(new Insertion().sort(array));
+        System.out.println(new Insertion().sort(PHONE_NUMBER));
     }
 
     @Override
