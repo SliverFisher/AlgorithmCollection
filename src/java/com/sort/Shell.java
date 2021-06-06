@@ -1,35 +1,34 @@
 package com.sort;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.Arrays;
 
-public class Shell implements AbstractSort {
+@Component
+public class Shell {
     public static void main(String[] args) {
-        System.out.println(new Shell().sort(PHONE_NUMBER));
+        System.out.println(new Shell().sort(AbstractSort.PHONE_NUMBER));
     }
 
-    @Override
     public String sort(int[] array) {
-        int gap = array.length / 2;
-        for (int i = gap; 0 < i; i /= 2) {
-            for (int j = 0; j < array.length; j++) {
-                if (j + i < array.length) {
-                    if (array[j] > array[j + i]) {
-                        for (int k = j + 1; k <= i + j; k++) {
-                            int selectValue = array[k];
-                            int index = k - 1;
-                            while (index >= j && array[index] > selectValue) {
-                                array[index + 1] = array[index];
-                                index--;
-                            }
-                            array[index + 1] = selectValue;
-                        }
+        for (int gap = array.length / 2; 0 < gap; gap /= 2) {
+            for (int o = 0; o + gap <= array.length / 2; o++) {
+                for (int j = gap + o; j < array.length; j += (gap + o)) {
+                    int select = array[j];
+                    int index = j - gap;
+                    while (index >= o && array[index] > select) {
+                        array[index + gap] = array[index];
+                        index -= gap;
                     }
+                    array[index + gap] = select;
                 }
             }
+
 
         }
         return Arrays.toString(array);
     }
+
 }
 

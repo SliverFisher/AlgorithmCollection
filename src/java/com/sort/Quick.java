@@ -1,14 +1,16 @@
 package com.sort;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Arrays;
 
-public class Quick implements AbstractSort {
+@Component
+public class Quick {
     public static void main(String[] args) {
-        quickSort(PHONE_NUMBER, 0, PHONE_NUMBER.length - 1);
-        System.out.println(Arrays.toString(PHONE_NUMBER));
+        quickSort(AbstractSort.PHONE_NUMBER, 0, AbstractSort.PHONE_NUMBER.length - 1);
+        System.out.println(Arrays.toString(AbstractSort.PHONE_NUMBER));
     }
 
-    @Override
     public String sort(int[] array) {
         quickSort(array, 0, array.length - 1);
         return Arrays.toString(array);
